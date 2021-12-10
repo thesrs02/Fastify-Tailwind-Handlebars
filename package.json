@@ -1,0 +1,50 @@
+{
+  "name": "fastify-commerce",
+  "version": "1.0.0",
+  "description": "Headless E Commerce Website built with Fastify and Prismic",
+  "main": "app.js",
+  "scripts": {
+    "watch": "webpack --watch",
+    "build": "webpack --mode production",
+    "start": "fastify start -l info app.js",
+    "fastify": "fastify start -w -l info -P app.js",
+    "browser": "browser-sync start --proxy http://127.0.0.1:3000 --files ./ ignore ./public",
+    "dev": "concurrently 'npm run fastify' 'npm run watch' 'npm run browser'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prismicio/client": "^5.1.0",
+    "concurrently": "^6.4.0",
+    "fastify": "^3.0.0",
+    "fastify-autoload": "^3.9.0",
+    "fastify-cli": "^2.14.0",
+    "fastify-plugin": "^3.0.0",
+    "fastify-sensible": "^3.1.0",
+    "fastify-static": "^4.5.0",
+    "handlebars": "^4.7.7",
+    "handlebars-helpers": "^0.10.0",
+    "html-minifier": "^4.0.0",
+    "point-of-view": "^4.16.0",
+    "prismic-dom": "^2.2.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "browser-sync": "^2.27.7",
+    "css-loader": "^6.5.0",
+    "css-minimizer-webpack-plugin": "^3.2.0",
+    "html-loader": "^3.0.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.3",
+    "postcss": "^8.4.4",
+    "postcss-loader": "^6.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "style-loader": "^3.3.1",
+    "tailwindcss": "^2.2.19",
+    "tap": "^15.0.9",
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0"
+  }
+}
